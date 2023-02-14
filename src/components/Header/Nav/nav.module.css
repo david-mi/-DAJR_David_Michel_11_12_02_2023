@@ -1,10 +1,10 @@
-nav {
+.nav {
   flex: 1;
   display: flex;
   align-items: center;
 }
 
-nav ul {
+.nav ul {
   flex: 1;
   display: flex;
   justify-content: space-between;
