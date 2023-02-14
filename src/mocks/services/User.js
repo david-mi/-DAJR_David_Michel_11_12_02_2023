@@ -1,4 +1,4 @@
-import UserModeling from "../../services/Modeling";
+import UserModeling from "../../services/user/Modeling";
 import { usersMock } from "../data/user";
 
 class UserMockService extends UserModeling {

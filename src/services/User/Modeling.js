@@ -59,7 +59,7 @@ class UserModeling {
   performanceModeling(performance) {
     const { userId, data } = performance;
 
-    const kindTypes = {
+    const kindNames = {
       1: 'Cardio',
       2: 'Energie',
       3: 'Endurance',
@@ -72,7 +72,7 @@ class UserModeling {
       ? data.map(({ value, kind }) => {
         return {
           value: value || 0,
-          kind: kindTypes[kind]
+          kind: kindNames[kind]
         };
       })
       : [];
