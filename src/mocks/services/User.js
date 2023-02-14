@@ -2,18 +2,29 @@ import UserModeling from "../../services/user/Modeling";
 import { usersMock } from "../data/user";
 
 class UserMockService extends UserModeling {
+  async resolveOrThrow(data) {
+    try {
+      const promiseData = await new Promise((resolve, reject) => {
+        if (data) {
+          resolve(data);
+        } else {
+          reject("User Not found !");
+        }
+      });
+
+      return promiseData;
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
   /**
    * Retrieves informations from a user
    * @param {string} userId 
    */
 
   async getMainData(userId) {
-    const userIdentity = await new Promise((resolve, reject) => {
-      if (usersMock[userId]) {
-        resolve(usersMock[userId].main);
-      } reject("User Not found !");
-    });
-
+    const userIdentity = await this.resolveOrThrow(usersMock[userId]?.main);
     return this.mainModeling(userIdentity);
   }
 
@@ -37,12 +48,7 @@ class UserMockService extends UserModeling {
   */
 
   async getActivity(userId) {
-    const userActivity = await new Promise((resolve, reject) => {
-      if (usersMock[userId]) {
-        resolve(usersMock[userId].activity);
-      } reject("User Not found !");
-    });
-
+    const userActivity = await this.resolveOrThrow(usersMock[userId]?.activity);
     return this.activityModeling(userActivity);
   }
 
@@ -52,12 +58,7 @@ class UserMockService extends UserModeling {
   */
 
   async getAverageSessions(userId) {
-    const userAverageSessions = await new Promise((resolve, reject) => {
-      if (usersMock[userId]) {
-        resolve(usersMock[userId].averageSessions);
-      } reject("User Not found !");
-    });
-
+    const userAverageSessions = await this.resolveOrThrow(usersMock[userId]?.averageSessions);
     return this.averageSessionsModeling(userAverageSessions);
   }
 
@@ -67,12 +68,7 @@ class UserMockService extends UserModeling {
   */
 
   async getPerformance(userId) {
-    const userPerformance = await new Promise((resolve, reject) => {
-      if (usersMock[userId]) {
-        resolve(usersMock[userId].performance);
-      } reject("User Not found !");
-    });
-
+    const userPerformance = await this.resolveOrThrow(usersMock[userId]?.performance);
     return this.performanceModeling(userPerformance);
   }
 }

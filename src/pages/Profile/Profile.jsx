@@ -2,8 +2,9 @@ import useFetch from "../../hooks/useFetch";
 import styles from "./profile.module.css";
 
 const Profile = () => {
-  const { userData } = useFetch("12");
+  const { userData, wait, error } = useFetch(userId);
 
+  if (error) return error.message;
   if (userData === null) return null;
 
   return (
