@@ -1,0 +1,11 @@
+.header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding-inline: clamp(20px, 3vw, 30px) clamp(20px, 7vw, 90px);
+  height: clamp(50px, 10vw, 90px);
+}
+
+svg {
+  height: 80px;
+}

@@ -1,0 +1,18 @@
+nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding-left: clamp(20px, 7vw, 150px);
+}
+
+.nav a {
+  color: white;
+  font-weight: 400;
+  font-size: clamp(18px, 3vw, 24px);
+}
