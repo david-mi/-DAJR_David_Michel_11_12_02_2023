@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import styles from "./profile.module.css";
 
 const Profile = () => {
-  const { userData } = useFetch("35");
+  const { userData } = useFetch("12");
 
   if (userData === null) return null;
 

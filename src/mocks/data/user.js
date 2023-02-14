@@ -1,7 +1,7 @@
 export const usersMock = {
-    "35": {
+    "12": {
         main: {
-            id: 35,
+            id: 12,
             userInfos: {
                 firstName: 'Gontran',
                 lastName: 'MockTar',
@@ -16,7 +16,7 @@ export const usersMock = {
             }
         },
         activity: {
-            userId: 35,
+            userId: 12,
             sessions: [
                 {
                     day: '2023-02-',
@@ -25,7 +25,7 @@ export const usersMock = {
                 },
                 {
                     day: '2023-02-',
-                    kilogram: 77,
+                    kilogram: 18,
                     calories: 220
                 },
                 {
@@ -45,7 +45,7 @@ export const usersMock = {
                 },
                 {
                     day: '2023-02-',
-                    kilogram: 77,
+                    kilogram: 18,
                     calories: 162
                 },
                 {
@@ -56,7 +56,7 @@ export const usersMock = {
             ]
         },
         averageSessions: {
-            userId: 35,
+            userId: 12,
             sessions: [
                 {
                     day: 1,
@@ -89,7 +89,7 @@ export const usersMock = {
             ]
         },
         performance: {
-            userId: 35,
+            userId: 12,
             kind: {
                 1: 'cardio',
                 2: 'energy',
@@ -126,9 +126,9 @@ export const usersMock = {
             ]
         }
     },
-    "77": {
+    "18": {
         main: {
-            id: 77,
+            id: 18,
             userInfos: {
                 firstName: 'Jean Mock',
                 lastName: 'Dupont',
@@ -143,7 +143,7 @@ export const usersMock = {
             }
         },
         activity: {
-            userId: 77,
+            userId: 18,
             sessions: [
                 {
                     day: '2023-02-',
@@ -152,7 +152,7 @@ export const usersMock = {
                 },
                 {
                     day: '2023-02-',
-                    kilogram: 77,
+                    kilogram: 18,
                     calories: 220
                 },
                 {
@@ -172,7 +172,7 @@ export const usersMock = {
                 },
                 {
                     day: '2023-02-',
-                    kilogram: 77,
+                    kilogram: 18,
                     calories: 162
                 },
                 {
@@ -183,7 +183,7 @@ export const usersMock = {
             ]
         },
         averageSessions: {
-            userId: 77,
+            userId: 18,
             sessions: [
                 {
                     day: 1,
@@ -216,7 +216,7 @@ export const usersMock = {
             ]
         },
         performance: {
-            userId: 77,
+            userId: 18,
             kind: {
                 1: 'cardio',
                 2: 'energy',
