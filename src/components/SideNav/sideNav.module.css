@@ -1,0 +1,39 @@
+.side-bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  min-width: 120px;
+}
+
+.side-bar * {
+  color: white;
+}
+
+.side-bar ul {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 64px;
+  width: 64px;
+  border-radius: 6px;
+}
+
+.copyrights {
+  position: absolute;
+  bottom: 59px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  font-size: 12px;
+}
