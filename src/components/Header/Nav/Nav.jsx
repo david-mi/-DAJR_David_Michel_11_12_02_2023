@@ -3,25 +3,30 @@ import { Link } from "react-router-dom";
 import styles from "./nav.module.css";
 
 /**
- * Create a Nav component which display naviation links
+ * @typedef Links
+ * @type {Object}
+ * @property {string} route 
+ * @property {string} name
  */
 
-const Nav = () => {
+/**
+ * Create a Nav component which display naviation links
+ * 
+ * @param {Object} props
+ * @param {Links[]} props.links 
+ * @returns 
+ */
+
+const Nav = ({ links }) => {
   return (
     <nav className={styles.nav}>
       <ul>
-        <li>
-          <Link to="#">Accueil</Link>
-        </li>
-        <li>
-          <Link to="/profile">Profil</Link>
-        </li>
-        <li>
-          <Link to="#">Réglage</Link>
-        </li>
-        <li>
-          <Link to="#">Communauté</Link>
-        </li>
+        {links.map(({ route, name }) => (
+          <li key={name}>
+            <Link to={route}>{name}</Link>
+          </li>
+        )
+        )}
       </ul>
     </nav>
   );
