@@ -1,4 +1,6 @@
-class UserService {
+import UserModeling from "./Modeling";
+
+class UserService extends UserModeling {
   #API_USER_URL = "http://localhost:3000/user";
 
   async #fetchData(url) {
@@ -18,8 +20,8 @@ class UserService {
 
   async getMainData(userId) {
     const apiUrl = `${this.#API_USER_URL}/${userId}`;
-    const data = await this.#fetchData(apiUrl);
-    return data;
+    const userIdentity = await this.#fetchData(apiUrl);
+    return this.mainModeling(userIdentity);
   }
 
   /**
@@ -28,14 +30,12 @@ class UserService {
   */
 
   async getAllData(userId) {
-    const data = Promise.all([
+    return Promise.all([
       this.getMainData(userId),
       this.getActivity(userId),
       this.getAverageSessions(userId),
       this.getPerformance(userId)
     ]);
-
-    return data;
   }
 
   /**
@@ -46,7 +46,8 @@ class UserService {
   async getActivity(userId) {
     const apiUrl = `${this.#API_USER_URL}/${userId}/activity`;
 
-    return await this.#fetchData(apiUrl);
+    const userActivity = await this.#fetchData(apiUrl);
+    return this.activityModeling(userActivity);
   }
 
   /**
@@ -57,7 +58,8 @@ class UserService {
   async getAverageSessions(userId) {
     const apiUrl = `${this.#API_USER_URL}/${userId}/average-sessions`;
 
-    return await this.#fetchData(apiUrl);
+    const userAverageSessions = await this.#fetchData(apiUrl);
+    return this.averageSessionsModeling(userAverageSessions);
   }
 
   /**
@@ -68,7 +70,8 @@ class UserService {
   async getPerformance(userId) {
     const apiUrl = `${this.#API_USER_URL}/${userId}/performance`;
 
-    return await this.#fetchData(apiUrl);
+    const userPerformance = await this.#fetchData(apiUrl);
+    return this.performanceModeling(userPerformance);
   }
 }
 

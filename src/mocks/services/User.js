@@ -1,17 +1,20 @@
+import UserModeling from "../../services/Modeling";
 import { usersMock } from "../data/user";
 
-class UserMockService {
+class UserMockService extends UserModeling {
   /**
    * Retrieves informations from a user
    * @param {string} userId 
    */
 
   async getMainData(userId) {
-    return new Promise((resolve, reject) => {
+    const userIdentity = await new Promise((resolve, reject) => {
       if (usersMock[userId]) {
         resolve(usersMock[userId].main);
       } reject("User Not found !");
     });
+
+    return this.mainModeling(userIdentity);
   }
 
   /**
@@ -34,11 +37,13 @@ class UserMockService {
   */
 
   async getActivity(userId) {
-    return new Promise((resolve, reject) => {
+    const userActivity = await new Promise((resolve, reject) => {
       if (usersMock[userId]) {
         resolve(usersMock[userId].activity);
       } reject("User Not found !");
     });
+
+    return this.activityModeling(userActivity);
   }
 
   /**
@@ -47,11 +52,13 @@ class UserMockService {
   */
 
   async getAverageSessions(userId) {
-    return new Promise((resolve, reject) => {
+    const userAverageSessions = await new Promise((resolve, reject) => {
       if (usersMock[userId]) {
         resolve(usersMock[userId].averageSessions);
       } reject("User Not found !");
     });
+
+    return this.averageSessionsModeling(userAverageSessions);
   }
 
   /**
@@ -60,11 +67,13 @@ class UserMockService {
   */
 
   async getPerformance(userId) {
-    return new Promise((resolve, reject) => {
+    const userPerformance = await new Promise((resolve, reject) => {
       if (usersMock[userId]) {
         resolve(usersMock[userId].performance);
       } reject("User Not found !");
     });
+
+    return this.performanceModeling(userPerformance);
   }
 }
 
