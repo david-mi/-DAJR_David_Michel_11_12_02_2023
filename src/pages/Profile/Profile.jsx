@@ -1,7 +1,9 @@
 import useFetch from "../../hooks/useFetch";
 import styles from "./profile.module.css";
+import { useParams } from "react-router-dom";
 
 const Profile = () => {
+  const { userId } = useParams();
   const { userData, wait, error } = useFetch(userId);
 
   if (error) return error.message;
