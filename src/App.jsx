@@ -1,9 +1,7 @@
+import Profile from "./pages/Profile/Profile";
+
 const App = () => {
-  return (
-    <div className="App">
-      app
-    </div>
-  );
+  return <Profile />;
 };
 
 export default App;
