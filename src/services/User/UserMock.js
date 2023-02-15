@@ -31,7 +31,7 @@ class UserServiceMock {
   }
 
   /**
-   * Retrieves all data from a user
+   * Retrieves all modeled mocked data from a user
    * @param {string} userId 
    */
 
@@ -45,7 +45,8 @@ class UserServiceMock {
   }
 
   /**
-   * Retrieves informations from a user
+   * Retrieves informations mocked data from a user then modeling it 
+   * @returns modeled user informations data
    * @param {string} userId 
    */
 
@@ -55,7 +56,8 @@ class UserServiceMock {
   }
 
   /**
-   * Retrieves activity from a user
+   * Retrieves activity mocked data from a user then modeling it 
+   * @returns modeled user activity data
    * @param {string} userId 
    */
 
@@ -65,7 +67,8 @@ class UserServiceMock {
   }
 
   /**
-   * Retrieves average sessions from a user
+   * Retrieves average mocked data from a user then modeling it 
+   * @returns modeled user average data
    * @param {string} userId 
    */
 
@@ -75,7 +78,8 @@ class UserServiceMock {
   }
 
   /**
-   * Retrieves performance from a user
+   * Retrieves performance mocked data from a user then modeling it 
+   * @returns modeled user performance data
    * @param {string} userId 
    */
 

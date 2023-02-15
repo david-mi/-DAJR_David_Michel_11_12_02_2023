@@ -23,7 +23,7 @@ class UserService {
   }
 
   /**
-   * Retrieves all modeled data from a user
+   * Retrieves all modeled api data from a user
    * @returns all modeled user data
    * @param {string} userId 
    */
@@ -38,7 +38,7 @@ class UserService {
   }
 
   /**
-   * Retrieves api informations from a user then modeling it 
+   * Retrieves informations api data from a user then modeling it 
    * @returns modeled user informations data
    * @param {string} userId 
    */
@@ -50,7 +50,7 @@ class UserService {
   }
 
   /**
-   * Retrieves activity api informations from a user then modeling it 
+   * Retrieves activity api data from a user then modeling it 
    * @returns modeled user activity data
    * @param {string} userId 
    */
@@ -63,7 +63,7 @@ class UserService {
   }
 
   /**
-   * Retrieves average api informations from a user then modeling it 
+   * Retrieves average api data from a user then modeling it 
    * @returns modeled user average data
    * @param {string} userId 
    */
@@ -76,7 +76,7 @@ class UserService {
   }
 
   /**
-   * Retrieves performance api informations from a user then modeling it 
+   * Retrieves performance api data from a user then modeling it 
    * @returns modeled user performance data
    * @param {string} userId 
    */
