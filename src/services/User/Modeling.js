@@ -1,5 +1,5 @@
 class UserModeling {
-  mainModeling(identity) {
+  main(identity) {
     const { id, userInfos, todayScore, keyData } = identity;
 
     return {
@@ -19,7 +19,7 @@ class UserModeling {
     };
   }
 
-  activityModeling(activity) {
+  activity(activity) {
     const { userId, sessions } = activity;
 
     const sessionSchema = Array.isArray(sessions)
@@ -38,7 +38,7 @@ class UserModeling {
     };
   }
 
-  averageSessionsModeling(averageSessions) {
+  averageSessions(averageSessions) {
     const { userId, sessions } = averageSessions;
 
     const sessionSchema = Array.isArray(sessions)
@@ -56,7 +56,7 @@ class UserModeling {
     };
   }
 
-  performanceModeling(performance) {
+  performance(performance) {
     const { userId, data } = performance;
 
     const kindNames = {

@@ -1,12 +1,22 @@
 import UserModeling from "./Modeling";
 import { main, activity, averageSessions, performance } from "../../mocks/data/users/index";
 
-class UserMockService extends UserModeling {
-  async resolveOrThrow(data) {
+const modeling = new UserModeling();
+
+class UserServiceMock {
+
+  /**
+   * Promise that resolve with {@link userData} if it exist or 
+   * reject with an error message if not
+   * 
+   * @param {Object} userData data retrieved from mock
+   */
+
+  async #resolveOrThrow(userData) {
     try {
       const promiseData = await new Promise((resolve, reject) => {
-        if (data) {
-          resolve(data);
+        if (userData) {
+          resolve(userData);
         } else {
           reject("User Not found !");
         }
@@ -19,19 +29,9 @@ class UserMockService extends UserModeling {
   }
 
   /**
-   * Retrieves informations from a user
+   * Retrieves all data from a user
    * @param {string} userId 
    */
-
-  async getMainData(userId) {
-    const userIdentity = await this.resolveOrThrow(main[userId]);
-    return this.mainModeling(userIdentity);
-  }
-
-  /**
-  * Retrieves all data from a user
-  * @param {string} userId 
-  */
 
   async getAllData(userId) {
     return Promise.all([
@@ -43,34 +43,46 @@ class UserMockService extends UserModeling {
   }
 
   /**
-  * Retrieves activity from a user
-  * @param {string} userId 
-  */
+   * Retrieves informations from a user
+   * @param {string} userId 
+   */
+
+  async getMainData(userId) {
+    const userIdentity = await this.#resolveOrThrow(main[userId]);
+    return modeling.main(userIdentity);
+  }
+
+  /**
+   * Retrieves activity from a user
+   * @param {string} userId 
+   */
 
   async getActivity(userId) {
-    const userActivity = await this.resolveOrThrow(activity[userId]);
-    return this.activityModeling(userActivity);
+    const userActivity = await this.#resolveOrThrow(activity[userId]);
+    return modeling.activity(userActivity);
   }
 
   /**
-  * Retrieves average sessions from a user
-  * @param {string} userId 
-  */
+   * Retrieves average sessions from a user
+   * @param {string} userId 
+   */
 
   async getAverageSessions(userId) {
-    const userAverageSessions = await this.resolveOrThrow(averageSessions[userId]);
-    return this.averageSessionsModeling(userAverageSessions);
+    const userAverageSessions = await this.#resolveOrThrow(averageSessions[userId]);
+    return modeling.averageSessions(userAverageSessions);
   }
 
   /**
-  * Retrieves performance from a user
-  * @param {string} userId 
-  */
+   * Retrieves performance from a user
+   * @param {string} userId 
+   */
 
   async getPerformance(userId) {
-    const userPerformance = await this.resolveOrThrow(performance[userId]);
-    return this.performanceModeling(userPerformance);
+    const userPerformance = await this.#resolveOrThrow(performance[userId]);
+    return modeling.performance(userPerformance);
   }
 }
 
-export default new UserMockService();
+const userServiceMock = new UserServiceMock();
+
+export default userServiceMock;

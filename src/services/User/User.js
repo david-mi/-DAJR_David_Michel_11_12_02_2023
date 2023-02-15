@@ -1,12 +1,21 @@
 import UserModeling from "./Modeling";
 
-class UserService extends UserModeling {
+const modeling = new UserModeling();
+
+class UserService {
   #API_USER_URL = "http://localhost:3000/user";
+
+  /**
+   * Fetch data based on {@link url}
+   *
+   * @param {string} url  
+   * @returns fetched data or throws an Error
+   */
 
   async #fetchData(url) {
     const response = await fetch(url);
-    if (response.status === false) {
-      throw new Error("failed to fetch");
+    if (response.ok === false) {
+      throw new Error("Failed to fetch");
     }
 
     const { data } = await response.json();
@@ -14,20 +23,10 @@ class UserService extends UserModeling {
   }
 
   /**
-   * Retrieves informations from a user
+   * Retrieves all modeled data from a user
+   * @returns all modeled user data
    * @param {string} userId 
    */
-
-  async getMainData(userId) {
-    const apiUrl = `${this.#API_USER_URL}/${userId}`;
-    const userIdentity = await this.#fetchData(apiUrl);
-    return this.mainModeling(userIdentity);
-  }
-
-  /**
-  * Retrieves all data from a user
-  * @param {string} userId 
-  */
 
   async getAllData(userId) {
     return Promise.all([
@@ -39,40 +38,57 @@ class UserService extends UserModeling {
   }
 
   /**
-  * Retrieves activity from a user
-  * @param {string} userId 
-  */
+   * Retrieves main api informations from a user then modeling it 
+   * @returns modeled user main data
+   * @param {string} userId 
+   */
+
+  async getMainData(userId) {
+    const apiUrl = `${this.#API_USER_URL}/${userId}`;
+    const userIdentity = await this.#fetchData(apiUrl);
+    return modeling.main(userIdentity);
+  }
+
+  /**
+   * Retrieves activity api informations from a user then modeling it 
+   * @returns modeled user activity data
+   * @param {string} userId 
+   */
 
   async getActivity(userId) {
     const apiUrl = `${this.#API_USER_URL}/${userId}/activity`;
 
     const userActivity = await this.#fetchData(apiUrl);
-    return this.activityModeling(userActivity);
+    return modeling.activity(userActivity);
   }
 
   /**
-  * Retrieves average sessions from a user
-  * @param {string} userId 
-  */
+   * Retrieves average api informations from a user then modeling it 
+   * @returns modeled user average data
+   * @param {string} userId 
+   */
 
   async getAverageSessions(userId) {
     const apiUrl = `${this.#API_USER_URL}/${userId}/average-sessions`;
 
     const userAverageSessions = await this.#fetchData(apiUrl);
-    return this.averageSessionsModeling(userAverageSessions);
+    return modeling.averageSessions(userAverageSessions);
   }
 
   /**
-  * Retrieves performance from a user
-  * @param {string} userId 
-  */
+   * Retrieves performance api informations from a user then modeling it 
+   * @returns modeled user performance data
+   * @param {string} userId 
+   */
 
   async getPerformance(userId) {
     const apiUrl = `${this.#API_USER_URL}/${userId}/performance`;
 
     const userPerformance = await this.#fetchData(apiUrl);
-    return this.performanceModeling(userPerformance);
+    return modeling.performance(userPerformance);
   }
 }
 
-export default new UserService();
+const userService = new UserService();
+
+export default userService;
