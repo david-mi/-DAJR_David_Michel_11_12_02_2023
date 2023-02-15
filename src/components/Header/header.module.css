@@ -6,6 +6,6 @@
   height: clamp(50px, 10vw, 90px);
 }
 
-svg {
+.header svg {
   height: 80px;
 }
