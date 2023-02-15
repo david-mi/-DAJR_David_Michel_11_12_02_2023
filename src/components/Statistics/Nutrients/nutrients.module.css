@@ -4,4 +4,6 @@
   flex-direction: column;
   gap: 40px;
   max-width: 258px;
+  width: 100%;
+  justify-self: flex-end;
 }

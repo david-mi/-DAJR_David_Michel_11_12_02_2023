@@ -12,6 +12,7 @@
 }
 
 .greeting {
+  margin-top: 41px;
   font-size: 18px;
   font-size: clamp(13px, 2vw, 18px);
 }
