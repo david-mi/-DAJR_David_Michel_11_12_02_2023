@@ -1,5 +1,5 @@
 import UserModeling from "./Modeling";
-import { usersMock } from "../../mocks/data/user";
+import { main, activity, averageSessions, performance } from "../../mocks/data/users/index";
 
 class UserMockService extends UserModeling {
   async resolveOrThrow(data) {
@@ -24,7 +24,7 @@ class UserMockService extends UserModeling {
    */
 
   async getMainData(userId) {
-    const userIdentity = await this.resolveOrThrow(usersMock[userId]?.main);
+    const userIdentity = await this.resolveOrThrow(main[userId]);
     return this.mainModeling(userIdentity);
   }
 
@@ -48,7 +48,7 @@ class UserMockService extends UserModeling {
   */
 
   async getActivity(userId) {
-    const userActivity = await this.resolveOrThrow(usersMock[userId]?.activity);
+    const userActivity = await this.resolveOrThrow(activity[userId]);
     return this.activityModeling(userActivity);
   }
 
@@ -58,7 +58,7 @@ class UserMockService extends UserModeling {
   */
 
   async getAverageSessions(userId) {
-    const userAverageSessions = await this.resolveOrThrow(usersMock[userId]?.averageSessions);
+    const userAverageSessions = await this.resolveOrThrow(averageSessions[userId]);
     return this.averageSessionsModeling(userAverageSessions);
   }
 
@@ -68,7 +68,7 @@ class UserMockService extends UserModeling {
   */
 
   async getPerformance(userId) {
-    const userPerformance = await this.resolveOrThrow(usersMock[userId]?.performance);
+    const userPerformance = await this.resolveOrThrow(performance[userId]);
     return this.performanceModeling(userPerformance);
   }
 }
