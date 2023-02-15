@@ -6,8 +6,10 @@ const modeling = new UserModeling();
 class UserServiceMock {
 
   /**
-   * Promise that resolve with {@link userData} if it exist or 
+   * Await a promise that resolve with {@link userData} if it exist or 
    * reject with an error message if not
+   * 
+   * - if promise rejects, throw an error
    * 
    * @param {Object} userData data retrieved from mock
    */
