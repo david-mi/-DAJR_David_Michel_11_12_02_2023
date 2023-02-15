@@ -1,0 +1,45 @@
+.nutrient {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 24px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "logo count"
+    "logo name";
+  background-color: #FBFBFB;
+  padding-block: 32px;
+  border-radius: 5px;
+}
+
+.count {
+  grid-area: count;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.name {
+  grid-area: name;
+  align-self: flex-end;
+  color: #74798C;
+  font-weight: 14px;
+  font-weight: 500;
+}
+
+.icon {
+  position: relative;
+  grid-area: logo;
+  display: grid;
+  place-items: center;
+  height: 60px;
+  width: 60px;
+  margin-left: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+}

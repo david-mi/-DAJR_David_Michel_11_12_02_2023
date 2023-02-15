@@ -1,3 +1,5 @@
+import { CalorieIcon, GlucideIcon, ProteinIcon, LipidIcon } from "../../components/svg";
+
 class UserModeling {
   informations(informations) {
     const { id, userInfos, todayScore, keyData } = informations;
@@ -10,12 +12,32 @@ class UserModeling {
         age: userInfos?.lastName || "",
       },
       todayScore: todayScore || 0,
-      nutrient: {
-        calorieCount: keyData?.calorieCount || 0,
-        proteinCount: keyData?.proteinCount || 0,
-        carbohydrateCount: keyData?.carbohydrateCount || 0,
-        lipidCount: keyData?.lipidCount || 0,
-      }
+      nutrients: [
+        {
+          name: "Calories",
+          unit: "kCal",
+          count: keyData?.calorieCount || 0,
+          Icon: CalorieIcon
+        },
+        {
+          name: "Protéines",
+          unit: "g",
+          count: keyData?.proteinCount || 0,
+          Icon: ProteinIcon
+        },
+        {
+          name: "Glucides",
+          unit: "g",
+          count: keyData?.carbohydrateCount || 0,
+          Icon: GlucideIcon
+        },
+        {
+          name: "Lipides",
+          unit: "g",
+          count: keyData?.lipidCount || 0,
+          Icon: LipidIcon
+        }
+      ]
     };
   }
 

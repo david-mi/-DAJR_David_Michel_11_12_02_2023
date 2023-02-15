@@ -1,0 +1,11 @@
+.icon {
+  --icon-clr: #4AB8FF;
+}
+
+.icon::after {
+  background-color: var(--icon-clr);
+}
+
+.icon path {
+  fill: var(--icon-clr);
+}
