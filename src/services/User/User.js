@@ -1,9 +1,9 @@
 import UserModeling from "./Modeling";
 
 const modeling = new UserModeling();
+const apiHost = process.env.REACT_APP_API_HOST;
 
 class UserService {
-  #API_USER_URL = "http://localhost:3000/user";
 
   /**
    * Fetch data based on {@link url}
@@ -44,7 +44,7 @@ class UserService {
    */
 
   async getMainData(userId) {
-    const apiUrl = `${this.#API_USER_URL}/${userId}`;
+    const apiUrl = `${apiHost}/user/${userId}`;
     const userIdentity = await this.#fetchData(apiUrl);
     return modeling.main(userIdentity);
   }
@@ -56,7 +56,7 @@ class UserService {
    */
 
   async getActivity(userId) {
-    const apiUrl = `${this.#API_USER_URL}/${userId}/activity`;
+    const apiUrl = `${apiHost}/user/${userId}/activity`;
 
     const userActivity = await this.#fetchData(apiUrl);
     return modeling.activity(userActivity);
@@ -69,7 +69,7 @@ class UserService {
    */
 
   async getAverageSessions(userId) {
-    const apiUrl = `${this.#API_USER_URL}/${userId}/average-sessions`;
+    const apiUrl = `${apiHost}/user/${userId}/average-sessions`;
 
     const userAverageSessions = await this.#fetchData(apiUrl);
     return modeling.averageSessions(userAverageSessions);
@@ -82,7 +82,7 @@ class UserService {
    */
 
   async getPerformance(userId) {
-    const apiUrl = `${this.#API_USER_URL}/${userId}/performance`;
+    const apiUrl = `${apiHost}/user/${userId}/performance`;
 
     const userPerformance = await this.#fetchData(apiUrl);
     return modeling.performance(userPerformance);
