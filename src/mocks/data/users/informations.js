@@ -1,4 +1,4 @@
-export const main = {
+export const informations = {
   "12": {
     id: 12,
     userInfos: {

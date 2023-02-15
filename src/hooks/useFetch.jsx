@@ -35,9 +35,9 @@ const useFetch = (userId) => {
         setLoading(true);
 
         const apiData = await userService.getAllData(userId);
-        const [main, activity, averageSessions, performance] = apiData;
+        const [informations, activity, averageSessions, performance] = apiData;
 
-        setUserData({ main, activity, averageSessions, performance });
+        setUserData({ informations, activity, averageSessions, performance });
       } catch (error) {
         console.error(error);
         setError(error);

@@ -15,7 +15,7 @@ const Profile = () => {
     <div className={styles.profile}>
       <SideNav copyrights="Copyright, SportSee 2020" links={profileNavLinks} />
       <div className={styles.data}>
-        <p><b>main:</b> {JSON.stringify(userData.main, null, 2)}</p>
+        <p><b>informations:</b> {JSON.stringify(userData.informations, null, 2)}</p>
         <br />
         <p><b>activity:</b> {JSON.stringify(userData.activity, null, 2)}</p>
         <br />

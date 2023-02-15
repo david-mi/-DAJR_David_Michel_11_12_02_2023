@@ -1,6 +1,6 @@
 class UserModeling {
-  main(identity) {
-    const { id, userInfos, todayScore, keyData } = identity;
+  informations(informations) {
+    const { id, userInfos, todayScore, keyData } = informations;
 
     return {
       id,

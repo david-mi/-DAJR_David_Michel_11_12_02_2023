@@ -1,5 +1,5 @@
 import UserModeling from "./Modeling";
-import { main, activity, averageSessions, performance } from "../../mocks/data/users/index";
+import { informations, activity, averageSessions, performance } from "../../mocks/data/users/index";
 
 const modeling = new UserModeling();
 
@@ -37,7 +37,7 @@ class UserServiceMock {
 
   async getAllData(userId) {
     return Promise.all([
-      this.getMainData(userId),
+      this.getInformations(userId),
       this.getActivity(userId),
       this.getAverageSessions(userId),
       this.getPerformance(userId)
@@ -49,9 +49,9 @@ class UserServiceMock {
    * @param {string} userId 
    */
 
-  async getMainData(userId) {
-    const userIdentity = await this.#resolveOrThrow(main[userId]);
-    return modeling.main(userIdentity);
+  async getInformations(userId) {
+    const userInformations = await this.#resolveOrThrow(informations[userId]);
+    return modeling.informations(userInformations);
   }
 
   /**

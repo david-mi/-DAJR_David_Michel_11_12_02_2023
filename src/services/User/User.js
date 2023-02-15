@@ -30,7 +30,7 @@ class UserService {
 
   async getAllData(userId) {
     return Promise.all([
-      this.getMainData(userId),
+      this.getInformations(userId),
       this.getActivity(userId),
       this.getAverageSessions(userId),
       this.getPerformance(userId)
@@ -38,15 +38,15 @@ class UserService {
   }
 
   /**
-   * Retrieves main api informations from a user then modeling it 
-   * @returns modeled user main data
+   * Retrieves api informations from a user then modeling it 
+   * @returns modeled user informations data
    * @param {string} userId 
    */
 
-  async getMainData(userId) {
+  async getInformations(userId) {
     const apiUrl = `${apiHost}/user/${userId}`;
-    const userIdentity = await this.#fetchData(apiUrl);
-    return modeling.main(userIdentity);
+    const userInformations = await this.#fetchData(apiUrl);
+    return modeling.informations(userInformations);
   }
 
   /**
