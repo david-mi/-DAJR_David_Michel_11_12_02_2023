@@ -1,5 +1,5 @@
-import UserModeling from "../../services/user/Modeling";
-import { usersMock } from "../data/user";
+import UserModeling from "./Modeling";
+import { usersMock } from "../../mocks/data/user";
 
 class UserMockService extends UserModeling {
   async resolveOrThrow(data) {
