@@ -1,0 +1,10 @@
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "heading heading heading nutrients"
+    "activity activity activity nutrients"
+    "average performance score nutrients";
+  padding: 68px 90px 86px 107px;
+}

@@ -3,6 +3,7 @@ import styles from "./profile.module.css";
 import { useParams } from "react-router-dom";
 import SideNav from "../../components/SideNav/SideNav";
 import { profileNavLinks } from "./profileNavLinks";
+import Statistics from "../../components/Statistics/Statistics";
 
 const Profile = () => {
   const { userId } = useParams();
@@ -14,16 +15,7 @@ const Profile = () => {
   return (
     <div className={styles.profile}>
       <SideNav copyrights="Copyright, SportSee 2020" links={profileNavLinks} />
-      <div className={styles.data}>
-        <p><b>informations:</b> {JSON.stringify(userData.informations, null, 2)}</p>
-        <br />
-        <p><b>activity:</b> {JSON.stringify(userData.activity, null, 2)}</p>
-        <br />
-        <p><b>averageSessions:</b> {JSON.stringify(userData.averageSessions, null, 2)}</p>
-        <br />
-        <p><b>performance:</b> {JSON.stringify(userData.performance, null, 2)}</p>
-        <br />
-      </div>
+      <Statistics userData={userData} />
     </div>
   );
 };
