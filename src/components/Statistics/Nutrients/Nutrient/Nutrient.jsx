@@ -1,5 +1,13 @@
 import React from 'react';
 import styles from "./nutrient.module.css";
+import { NutrientPropTypes } from "./propTypes";
+
+/**
+ * Create a Nutrients component to show a nutrient infos for a user
+ * 
+ * @param {Object} props 
+ * @param {UserNutrient} props.nutrient
+ */
 
 const Nutrient = ({ nutrient }) => {
   const { name, unit, count, Icon } = nutrient;
@@ -12,5 +20,7 @@ const Nutrient = ({ nutrient }) => {
     </article>
   );
 };
+
+Nutrient.propTypes = NutrientPropTypes;
 
 export default Nutrient;

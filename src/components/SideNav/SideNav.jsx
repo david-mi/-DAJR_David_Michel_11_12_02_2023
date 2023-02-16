@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./sideNav.module.css";
 import { Link } from "react-router-dom";
+import { SideNavPropTypes } from "./propTypes";
 
 /**
  * @typedef Links
@@ -13,6 +14,7 @@ import { Link } from "react-router-dom";
  * Create a Nav component which display naviation links
  * 
  * @param {Object} props
+ * @param {string} props.copyrights
  * @param {Links[]} props.links 
  * @returns 
  */
@@ -34,5 +36,7 @@ const SideNav = ({ copyrights, links }) => {
     </nav>
   );
 };
+
+SideNav.propType = SideNavPropTypes;
 
 export default SideNav;

@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import userServiceApi from "../services/user/User";
 import userServiceMock from "../services/user/UserMock";
+import "../services/user/Modeling/types";
 
 const userService = process.env.REACT_APP_DATA === "MOCK"
   ? userServiceMock
   : userServiceApi;
 
-
 /**
  * @typedef {Object} useFetchReturn
- * @property {Lodgings | Lodging | null}  data
+ * @property {UserAllData | null} userData
  * @property {boolean} loading
  * @property {Error | null} error
  */

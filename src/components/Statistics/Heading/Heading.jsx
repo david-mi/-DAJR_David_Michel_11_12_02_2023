@@ -1,5 +1,13 @@
 import React from 'react';
 import styles from "./heading.module.css";
+import { HeadingPropTypes } from "./propTypes";
+
+/**
+ * Create a Heading component which takes a React ElementType as props
+ * 
+ * @param {Object} props 
+ * @param {UserIdentity} props.identity
+ */
 
 const Heading = ({ identity }) => {
   return (
@@ -9,5 +17,7 @@ const Heading = ({ identity }) => {
     </header>
   );
 };
+
+Heading.propTypes = HeadingPropTypes;
 
 export default Heading;
