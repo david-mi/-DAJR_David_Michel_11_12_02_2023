@@ -1,4 +1,4 @@
-import UserModeling from "./Modeling";
+import UserModeling from "./Modeling/Modeling";
 
 const modeling = new UserModeling();
 const apiHost = process.env.REACT_APP_API_HOST;

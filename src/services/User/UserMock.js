@@ -1,4 +1,4 @@
-import UserModeling from "./Modeling";
+import UserModeling from "./Modeling/Modeling";
 import { informations, activity, averageSessions, performance } from "../../mocks/data/users/index";
 
 const modeling = new UserModeling();

@@ -1,6 +1,13 @@
-import { CalorieIcon, GlucideIcon, ProteinIcon, LipidIcon } from "../../components/svg";
+import { CalorieIcon, GlucideIcon, ProteinIcon, LipidIcon } from "../../../components/svg";
+import "./types";
 
 class UserModeling {
+
+  /**
+   * @param {Object} informations user informations from api or mock
+   * @returns {UserInformations} modeled user informations
+   */
+
   informations(informations) {
     const { id, userInfos, todayScore, keyData } = informations;
 
@@ -9,7 +16,7 @@ class UserModeling {
       identity: {
         firstName: userInfos?.firstName || "",
         lastName: userInfos?.lastName || "",
-        age: userInfos?.lastName || "",
+        age: userInfos?.age || 0,
       },
       todayScore: todayScore || 0,
       nutrients: [
@@ -41,10 +48,15 @@ class UserModeling {
     };
   }
 
-  activity(activity) {
-    const { userId, sessions } = activity;
+  /**
+   * @param {Object} activity user activity from api or mock
+   * @returns {Array<UserActivity>}
+   */
 
-    const sessionSchema = Array.isArray(sessions)
+  activity(activity) {
+    const { sessions } = activity;
+
+    return Array.isArray(sessions)
       ? sessions.map(({ day, kilogram, calories }) => {
         return {
           day: day || "",
@@ -53,17 +65,17 @@ class UserModeling {
         };
       })
       : [];
-
-    return {
-      userId,
-      sessions: sessionSchema
-    };
   }
 
-  averageSessions(averageSessions) {
-    const { userId, sessions } = averageSessions;
+  /**
+   * @param {Object} averageSessions user activity from api or mock
+   * @returns {Array<UserAverageSession>}
+   */
 
-    const sessionSchema = Array.isArray(sessions)
+  averageSessions(averageSessions) {
+    const { sessions } = averageSessions;
+
+    return Array.isArray(sessions)
       ? sessions.map(({ day, sessionLength }) => {
         return {
           day: day || 0,
@@ -71,15 +83,15 @@ class UserModeling {
         };
       })
       : [];
-
-    return {
-      userId,
-      sessions: sessionSchema
-    };
   }
 
+  /**
+   * @param {Object} performance user activity from api or mock
+   * @returns {Array<UserPerformance>}
+   */
+
   performance(performance) {
-    const { userId, data } = performance;
+    const { data } = performance;
 
     const kindNames = {
       1: 'Cardio',
@@ -90,7 +102,7 @@ class UserModeling {
       6: 'Intensité'
     };
 
-    const kindDataSchema = Array.isArray(data)
+    return Array.isArray(data)
       ? data.map(({ value, kind }) => {
         return {
           value: value || 0,
@@ -98,11 +110,6 @@ class UserModeling {
         };
       })
       : [];
-
-    return {
-      userId,
-      data: kindDataSchema
-    };
   }
 }
 
