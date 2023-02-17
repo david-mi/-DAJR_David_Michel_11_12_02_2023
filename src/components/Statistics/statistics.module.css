@@ -1,6 +1,7 @@
 .statistics {
   flex: 1;
   display: grid;
+  gap: clamp(20px, 2vw, 32px);
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(3, auto);
   grid-template-areas:

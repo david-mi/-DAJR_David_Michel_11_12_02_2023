@@ -7,7 +7,7 @@
     "logo count"
     "logo name";
   background-color: #FBFBFB;
-  padding-block: 32px;
+  padding: 32px;
   border-radius: 5px;
 }
 
@@ -32,7 +32,6 @@
   place-items: center;
   height: 60px;
   width: 60px;
-  margin-left: 32px;
   border-radius: 6px;
   overflow: hidden;
 }
