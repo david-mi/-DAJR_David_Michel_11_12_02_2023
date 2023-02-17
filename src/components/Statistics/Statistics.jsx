@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Nutrients } from "./index";
+import { Heading, Nutrients, Activity } from "./index";
 import styles from "./statistics.module.css";
 import { StatisticsPropTypes } from "./propTypes";
 
@@ -17,6 +17,7 @@ const Statistics = ({ userData }) => {
     <section className={styles.statistics}>
       <Heading identity={informations.identity} />
       <Nutrients nutrients={informations.nutrients} />
+      <Activity activity={userData.activity} />
     </section>
   );
 };

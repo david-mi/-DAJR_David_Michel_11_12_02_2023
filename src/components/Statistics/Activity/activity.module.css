@@ -1,0 +1,23 @@
+.activity {
+  grid-area: activity;
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  background-color: #FBFBFB;
+  padding: 23px 29px 23px 43px;
+  padding-inline: clamp(10px, 2vw, 29px) clamp(10px, 3vw, 20px);
+  padding-block: clamp(10px, 2vw, 23px);
+  max-width: 835px;
+  width: 100%;
+  max-height: 320px;
+  height: 100%;
+}
+
+.legend {
+  color: black;
+  padding: 12px;
+}
+
+.legend.poids {
+  margin-right: 10px;
+}
