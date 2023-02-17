@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import userServiceApi from "../services/user/User";
-import userServiceMock from "../services/user/UserMock";
-import "../services/user/Modeling/types";
+import userServiceApi from "../services/User/User";
+import userServiceMock from "../services/User/UserMock";
+import "../services/User/Modeling/types";
 
 const userService = process.env.REACT_APP_DATA === "MOCK"
   ? userServiceMock
