@@ -114,12 +114,14 @@ class UserModeling {
     };
 
     return Array.isArray(data)
-      ? data.map(({ value, kind }) => {
-        return {
-          value: value || 0,
-          kind: kindNames[kind] || 0
-        };
-      })
+      ? data
+        .map(({ value, kind }) => {
+          return {
+            value: value || 0,
+            kind: kindNames[kind] || 0
+          };
+        })
+        .reverse()
       : [];
   }
 }

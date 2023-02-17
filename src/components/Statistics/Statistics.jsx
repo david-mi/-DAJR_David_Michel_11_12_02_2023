@@ -2,7 +2,6 @@ import React from "react";
 import { Heading, Nutrients, Activity, AverageSessions, Performance } from "./index";
 import styles from "./statistics.module.css";
 import { StatisticsPropTypes } from "./propTypes";
-import AverageSessions from "./AverageSessions/AverageSessions";
 
 /**
  * Show every user statistics
@@ -12,7 +11,7 @@ import AverageSessions from "./AverageSessions/AverageSessions";
  */
 
 const Statistics = ({ userData }) => {
-  const { informations, averageSessions } = userData;
+  const { informations, averageSessions, performance } = userData;
 
   return (
     <section className={styles.statistics}>
@@ -20,6 +19,7 @@ const Statistics = ({ userData }) => {
       <Nutrients nutrients={informations.nutrients} />
       <Activity activity={userData.activity} />
       <AverageSessions averageSessions={averageSessions} />
+      <Performance performance={performance} />
     </section>
   );
 };
