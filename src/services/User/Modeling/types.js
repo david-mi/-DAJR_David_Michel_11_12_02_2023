@@ -30,7 +30,7 @@
 
 /**
  * @typedef {Object} UserAverageSession
- * @property {number} day
+ * @property {string} day
  * @property {number} sessionLength
  */
 

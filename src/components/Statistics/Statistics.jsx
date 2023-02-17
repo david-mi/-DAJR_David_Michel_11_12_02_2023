@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Nutrients, Activity } from "./index";
+import { Heading, Nutrients, Activity, AverageSessions, Performance } from "./index";
 import styles from "./statistics.module.css";
 import { StatisticsPropTypes } from "./propTypes";
 import AverageSessions from "./AverageSessions/AverageSessions";

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const UserAverageSessionPropTypes = PropTypes.exact({
-  day: PropTypes.number.isRequired,
+  day: PropTypes.string.isRequired,
   sessionLength: PropTypes.number.isRequired,
 }).isRequired;
 
