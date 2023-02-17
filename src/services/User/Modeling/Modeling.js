@@ -76,10 +76,20 @@ class UserModeling {
   averageSessions(averageSessions) {
     const { sessions } = averageSessions;
 
+    const days = {
+      1: "L",
+      2: "M",
+      3: "M",
+      4: "J",
+      5: "V",
+      6: "S",
+      7: "D"
+    };
+
     return Array.isArray(sessions)
       ? sessions.map(({ day, sessionLength }) => {
         return {
-          day: day || 0,
+          day: days[day] || 0,
           sessionLength: sessionLength || 0,
         };
       })
@@ -107,7 +117,7 @@ class UserModeling {
       ? data.map(({ value, kind }) => {
         return {
           value: value || 0,
-          kind: kindNames[kind]
+          kind: kindNames[kind] || 0
         };
       })
       : [];
