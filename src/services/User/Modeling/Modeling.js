@@ -57,11 +57,12 @@ class UserModeling {
     const { sessions } = activity;
 
     return Array.isArray(sessions)
-      ? sessions.map(({ day, kilogram, calories }) => {
+      ? sessions.map(({ day, kilogram, calories }, index) => {
         return {
           day: day || "",
           kilogram: kilogram || 0,
-          calories: calories || 0
+          calories: calories || 0,
+          index: index + 1
         };
       })
       : [];

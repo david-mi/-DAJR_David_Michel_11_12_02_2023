@@ -23,7 +23,8 @@ const UserInformationsPropTypes = PropTypes.exact({
 const UserActiviyPropTypes = PropTypes.exact({
   day: PropTypes.string.isRequired,
   kilogram: PropTypes.number.isRequired,
-  calories: PropTypes.number.isRequired
+  calories: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired
 }).isRequired;
 
 const UserAverageSessionPropTypes = PropTypes.exact({
