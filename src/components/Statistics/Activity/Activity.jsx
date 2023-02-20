@@ -38,7 +38,7 @@ const Activity = ({ activity }) => {
             dataKey="kilogram"
             type="number"
           />
-          <Tooltip content={<CustomToolTip />} />
+          <Tooltip content={<CustomToolTip />} wrapperStyle={{ outline: "none" }} cursor={{ width: 56 }} />
           <Legend
             verticalAlign="top"
             align="right"
