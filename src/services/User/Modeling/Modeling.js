@@ -9,7 +9,7 @@ class UserModeling {
    */
 
   informations(informations) {
-    const { id, userInfos, todayScore, keyData } = informations;
+    const { id, userInfos, todayScore, score, keyData } = informations;
 
     return {
       id,
@@ -18,7 +18,7 @@ class UserModeling {
         lastName: userInfos?.lastName || "",
         age: userInfos?.age || 0,
       },
-      todayScore: todayScore * 100 || 0,
+      todayScore: (score || todayScore || 0) * 100,
       nutrients: [
         {
           name: "Calories",
