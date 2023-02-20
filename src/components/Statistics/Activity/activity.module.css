@@ -8,7 +8,7 @@
   padding-inline: clamp(10px, 2vw, 29px) clamp(10px, 3vw, 20px);
   padding-block: clamp(10px, 2vw, 23px);
   max-width: 835px;
-  min-width: 600px;
+  min-width: 500px;
   width: 100%;
   max-height: 320px;
   height: 100%;

@@ -16,7 +16,7 @@ const AverageSessions = ({ averageSessions }) => {
   return (
     <div className={styles["average-sessions"]}>
       <p className={styles.title}>Durée moyenne des sessions</p>
-      <ResponsiveContainer >
+      <ResponsiveContainer>
         <LineChart data={averageSessions}>
           <XAxis
             dataKey="day"
