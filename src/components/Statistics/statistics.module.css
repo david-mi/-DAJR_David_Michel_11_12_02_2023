@@ -5,7 +5,7 @@
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
-    "heading heading heading nutrients"
+    "heading heading heading heading"
     "activity activity activity nutrients"
     "square square square nutrients";
   padding-top: clamp(20px, 5vw, 68px);

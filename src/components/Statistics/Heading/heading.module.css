@@ -1,6 +1,6 @@
 .heading {
   grid-area: heading;
-
+  margin-bottom: 77px;
 }
 
 .greeting {
