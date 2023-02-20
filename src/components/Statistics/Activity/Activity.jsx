@@ -14,6 +14,7 @@ import CustomToolTip from "./CustomToolTip/CustomToolTip";
 const Activity = ({ activity }) => {
   return (
     <div className={styles.activity}>
+      <p className={styles.title}>Activité quotidienne</p>
       <ResponsiveContainer width="99%" height="auto" aspect={3}>
         <BarChart data={activity} barGap={8} barCategoryGap={54}  >
           <CartesianGrid strokeDasharray="2" vertical={false} />
