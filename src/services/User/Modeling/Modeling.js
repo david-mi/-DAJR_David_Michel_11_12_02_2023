@@ -18,7 +18,7 @@ class UserModeling {
         lastName: userInfos?.lastName || "",
         age: userInfos?.age || 0,
       },
-      todayScore: todayScore || 0,
+      todayScore: todayScore * 100 || 0,
       nutrients: [
         {
           name: "Calories",

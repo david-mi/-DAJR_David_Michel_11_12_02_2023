@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Nutrients, Activity, AverageSessions, Performance } from "./index";
+import { Heading, Nutrients, Activity, AverageSessions, Performance, Score } from "./index";
 import styles from "./statistics.module.css";
 import { StatisticsPropTypes } from "./propTypes";
 
@@ -20,6 +20,7 @@ const Statistics = ({ userData }) => {
       <Activity activity={userData.activity} />
       <AverageSessions averageSessions={averageSessions} />
       <Performance performance={performance} />
+      <Score score={informations.todayScore} />
     </section>
   );
 };

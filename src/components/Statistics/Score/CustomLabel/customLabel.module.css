@@ -1,0 +1,28 @@
+.label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 500;
+  background-color: white;
+  width: 71%;
+  aspect-ratio: 1/1;
+  display: grid;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.label p:nth-child(1) {
+  font-size: 26px;
+  color: black;
+  align-self: flex-end;
+}
+
+.label p:nth-child(2) {
+  font-size: 16px;
+  color: #74798C;
+  width: 60px;
+  margin-top: 5px;
+  align-self: flex-start;
+}
