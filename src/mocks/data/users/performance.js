@@ -48,27 +48,27 @@ export const performance = {
     },
     data: [
       {
-        value: 80,
+        value: 200,
         kind: 1
       },
       {
-        value: 120,
+        value: 240,
         kind: 2
       },
       {
-        value: 140,
+        value: 80,
         kind: 3
       },
       {
-        value: 50,
+        value: 80,
         kind: 4
       },
       {
-        value: 200,
+        value: 220,
         kind: 5
       },
       {
-        value: 90,
+        value: 110,
         kind: 6
       }
     ]

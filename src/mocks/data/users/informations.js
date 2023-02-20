@@ -2,26 +2,26 @@ export const informations = {
   "12": {
     id: 12,
     userInfos: {
-      firstName: 'Gontran',
-      lastName: 'MockTar',
-      age: 50,
+      firstName: "MockTar",
+      lastName: 'Pelegrino',
+      age: 31,
     },
-    todayScore: 0.3,
+    todayScore: 0.12,
     keyData: {
-      calorieCount: 2500,
-      proteinCount: 90,
-      carbohydrateCount: 150,
-      lipidCount: 120
+      calorieCount: 1930,
+      proteinCount: 155,
+      carbohydrateCount: 290,
+      lipidCount: 50
     }
   },
   "18": {
     id: 18,
     userInfos: {
       firstName: 'Jean Mock',
-      lastName: 'Dupont',
-      age: 20,
+      lastName: 'Pestrouki',
+      age: 34,
     },
-    todayScore: 0.5,
+    score: 0.3,
     keyData: {
       calorieCount: 2500,
       proteinCount: 90,

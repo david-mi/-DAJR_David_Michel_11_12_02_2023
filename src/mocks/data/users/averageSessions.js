@@ -41,27 +41,27 @@ export const averageSessions = {
       },
       {
         day: 2,
-        sessionLength: 23
+        sessionLength: 40
       },
       {
         day: 3,
-        sessionLength: 45
-      },
-      {
-        day: 4,
         sessionLength: 50
       },
       {
+        day: 4,
+        sessionLength: 30
+      },
+      {
         day: 5,
-        sessionLength: 0
+        sessionLength: 30
       },
       {
         day: 6,
-        sessionLength: 0
+        sessionLength: 50
       },
       {
         day: 7,
-        sessionLength: 60
+        sessionLength: 50
       }
     ]
   }
