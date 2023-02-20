@@ -7,9 +7,16 @@
   grid-template-areas:
     "heading heading heading nutrients"
     "activity activity activity nutrients"
-    "average performance score nutrients";
+    "square square square nutrients";
   padding-top: clamp(20px, 5vw, 68px);
   padding-right: clamp(20px, 6vw, 90px);
-  padding-bottom: clamp(20px, 7vw, 86px);
-  padding-left: clamp(20px, 8vw, 107px);
+  padding-bottom: clamp(20px, 6vw, 86px);
+  padding-left: clamp(20px, 7vw, 107px);
+}
+
+.squares {
+  grid-area: square;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 2vw, 32px);
 }

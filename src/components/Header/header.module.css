@@ -4,6 +4,7 @@
   align-items: center;
   padding-inline: clamp(20px, 3vw, 30px) clamp(20px, 7vw, 90px);
   height: 90px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
 }
 
 .header svg {

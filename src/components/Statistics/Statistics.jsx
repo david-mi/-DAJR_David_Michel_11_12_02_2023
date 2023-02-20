@@ -18,9 +18,11 @@ const Statistics = ({ userData }) => {
       <Heading identity={informations.identity} />
       <Nutrients nutrients={informations.nutrients} />
       <Activity activity={userData.activity} />
-      <AverageSessions averageSessions={averageSessions} />
-      <Performance performance={performance} />
-      <Score score={informations.todayScore} />
+      <div className={styles.squares}>
+        <AverageSessions averageSessions={averageSessions} />
+        <Performance performance={performance} />
+        <Score score={informations.todayScore} />
+      </div>
     </section>
   );
 };
