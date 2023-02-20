@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "./nutrients.module.css";
 import Nutrient from "./Nutrient/Nutrient";
 import { NutrientsPropTypes } from "./propTypes";
+import "../../../services/User/Modeling/types";
 
 /**
  * Create a Nutrients component to show all nutrients infos for a user

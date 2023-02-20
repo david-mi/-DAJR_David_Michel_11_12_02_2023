@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./heading.module.css";
 import { HeadingPropTypes } from "./propTypes";
+import "../../../services/User/Modeling/types";
 
 /**
  * Create a Heading component which takes a React ElementType as props
