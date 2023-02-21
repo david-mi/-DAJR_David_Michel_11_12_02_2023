@@ -1,11 +1,6 @@
 import { useEffect, useState } from 'react';
-import userServiceApi from "../services/User/User";
-import userServiceMock from "../services/User/UserMock";
+import { userService } from "../config";
 import "../services/User/Modeling/types";
-
-const userService = process.env.REACT_APP_DATA === "MOCK"
-  ? userServiceMock
-  : userServiceApi;
 
 /**
  * @typedef {Object} useFetchReturn
