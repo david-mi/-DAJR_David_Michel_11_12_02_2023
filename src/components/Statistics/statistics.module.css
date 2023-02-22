@@ -8,10 +8,25 @@
     "heading heading heading heading"
     "activity activity activity nutrients"
     "square square square nutrients";
-  padding-top: clamp(20px, 5vw, 68px);
-  padding-right: clamp(20px, 6vw, 90px);
-  padding-bottom: clamp(20px, 6vw, 86px);
+  padding-top: clamp(20px, 4vw, 40px);
+  padding-right: clamp(20px, 4vw, 60px);
+  padding-bottom: clamp(20px, 3vw, 40px);
   padding-left: clamp(20px, 7vw, 107px);
+}
+
+@media screen and (max-width: 1400px) {
+  .statistics {
+    flex: 1;
+    display: grid;
+    gap: clamp(20px, 2vw, 32px);
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "heading"
+      "nutrients"
+      "activity"
+      "square";
+  }
 }
 
 .squares {

@@ -7,3 +7,12 @@
   width: 100%;
   justify-self: flex-end;
 }
+
+@media screen and (max-width: 1400px) {
+  .nutrients {
+    flex-direction: row;
+    justify-self: flex-start;
+    gap: clamp(15px, 2vw, 25px);
+    max-width: none;
+  }
+}

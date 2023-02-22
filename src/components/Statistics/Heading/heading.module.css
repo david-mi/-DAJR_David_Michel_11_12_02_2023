@@ -1,6 +1,6 @@
 .heading {
   grid-area: heading;
-  margin-bottom: 77px;
+  margin-bottom: 10px;
 }
 
 .greeting {
@@ -12,7 +12,7 @@
 }
 
 .congratualtions {
-  margin-top: 41px;
+  margin-top: 20px;
   font-size: 18px;
   font-size: clamp(13px, 2vw, 18px);
 }

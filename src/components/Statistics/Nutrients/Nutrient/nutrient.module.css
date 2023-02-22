@@ -7,9 +7,16 @@
     "logo count"
     "logo name";
   background-color: #FBFBFB;
-  padding: 32px;
+  padding: clamp(10px, 3vw, 32px);
   border-radius: 5px;
 }
+
+@media screen and (max-width: 1400px) {
+  .nutrient {
+    padding: clamp(10px, 3vw, 20px);
+  }
+}
+
 
 .count {
   grid-area: count;
