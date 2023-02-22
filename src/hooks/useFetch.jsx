@@ -34,7 +34,6 @@ const useFetch = (userId) => {
 
         setUserData({ informations, activity, averageSessions, performance });
       } catch (error) {
-        console.error(error);
         setError(error);
       } finally {
         setLoading(false);
