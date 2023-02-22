@@ -6,7 +6,7 @@ import "./services/User/Modeling/types";
 
 const headerNavLinks = [
   { route: "/", name: "Accueil" },
-  { route: "/profile", name: "Profil" },
+  { route: "/", name: "Profil" },
   { route: "/", name: "Réglage" },
   { route: "/", name: "Communauté" },
 ];
