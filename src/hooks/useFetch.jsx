@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react';
 import { userService } from "../config";
-import "../services/User/Modeling/types";
+
+/**
+ * @typedef {Object} UserAllData
+ * @property {object} informations
+ * @property {Array<object>} activity
+ * @property {Array<object>} averageSessions
+ * @property {Array<object>} performance
+ */
 
 /**
  * @typedef {Object} useFetchReturn

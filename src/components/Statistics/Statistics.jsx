@@ -4,6 +4,14 @@ import styles from "./statistics.module.css";
 import { StatisticsPropTypes } from "./propTypes";
 
 /**
+ * @typedef {Object} UserAllData
+ * @property {object} informations
+ * @property {Array<object>} activity
+ * @property {Array<object>} averageSessions
+ * @property {Array<object>} performance
+ */
+
+/**
  * Show every user statistics
  * 
  * @param {Object} props 

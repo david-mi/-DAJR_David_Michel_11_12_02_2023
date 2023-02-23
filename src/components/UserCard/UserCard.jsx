@@ -10,7 +10,6 @@ import { UserCardPropTypes } from "./propTypes";
  * @param {string} props.userId
  */
 
-
 const UserCard = ({ userId, Logo }) => {
   const apiEnvironment = process.env.REACT_APP_API_HOST !== undefined
     ? "API"

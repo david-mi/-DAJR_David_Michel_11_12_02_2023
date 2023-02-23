@@ -1,4 +1,10 @@
 import styles from "./proteinIcon.module.css";
+import { ProteinIconPropTypes } from "./propTypes";
+
+/**
+ * @param {object} props 
+ * @param {string} props.className
+ */
 
 const ProteinIcon = ({ className }) => {
   return (
@@ -9,5 +15,7 @@ const ProteinIcon = ({ className }) => {
     </div>
   );
 };
+
+ProteinIcon.propTypes = ProteinIconPropTypes;
 
 export default ProteinIcon;

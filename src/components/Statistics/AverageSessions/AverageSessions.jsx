@@ -3,7 +3,12 @@ import { XAxis, Tooltip, ResponsiveContainer, LineChart, Line } from "recharts";
 import styles from "./averageSessions.module.css";
 import { UserAverageSessionsPropTypes } from "./propTypes";
 import CustomToolTip from "./CustomToolTip/CustomToolTip";
-import "../../../services/User/Modeling/types";
+
+/**
+ * @typedef {Object} UserAverageSession
+ * @property {string} day
+ * @property {number} sessionLength
+ */
 
 /**
  * Show a graph with average sessions time for a user

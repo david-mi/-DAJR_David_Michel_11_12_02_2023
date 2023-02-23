@@ -1,7 +1,13 @@
 import React from 'react';
 import styles from "./heading.module.css";
 import { HeadingPropTypes } from "./propTypes";
-import "../../../services/User/Modeling/types";
+
+/**
+ * @typedef {Object} UserIdentity
+ * @property {string} firstName
+ * @property {string} lastName
+ * @property {number} age
+ */
 
 /**
  * Create a Heading component which takes a React ElementType as props

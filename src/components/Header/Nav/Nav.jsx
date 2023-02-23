@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import styles from "./nav.module.css";
+import { NavPropTypes } from "./propTypes";
 
 /**
  * @typedef Links
@@ -31,5 +32,7 @@ const Nav = ({ links }) => {
     </nav>
   );
 };
+
+Nav.propTypes = NavPropTypes;
 
 export default Nav;

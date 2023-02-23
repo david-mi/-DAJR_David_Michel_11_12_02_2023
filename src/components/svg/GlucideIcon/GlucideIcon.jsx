@@ -1,4 +1,10 @@
 import styles from "./glucideIcon.module.css";
+import { GlucideIconPropTypes } from "./propTypes";
+
+/**
+ * @param {object} props 
+ * @param {string} props.className
+ */
 
 const GlucideIcon = ({ className }) => {
   return (
@@ -11,5 +17,7 @@ const GlucideIcon = ({ className }) => {
     </div>
   );
 };
+
+GlucideIcon.propTypes = GlucideIconPropTypes;
 
 export default GlucideIcon;

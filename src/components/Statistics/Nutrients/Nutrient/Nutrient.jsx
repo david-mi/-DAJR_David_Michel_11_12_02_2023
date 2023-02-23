@@ -3,6 +3,14 @@ import styles from "./nutrient.module.css";
 import { NutrientPropTypes } from "./propTypes";
 
 /**
+ * @typedef {Object} UserNutrient
+ * @property {string} name
+ * @property {"kCal" | "g"} unit
+ * @property {number} count
+ * @property {React.ElementType} Icon
+ */
+
+/**
  * Create a Nutrients component to show a nutrient infos for a user
  * 
  * @param {Object} props 

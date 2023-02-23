@@ -1,11 +1,10 @@
 import { CalorieIcon, GlucideIcon, ProteinIcon, LipidIcon } from "../../../components/svg";
-import "./types";
 
 class UserModeling {
 
   /**
    * @param {Object} informations user informations from api or mock
-   * @returns {UserInformations} modeled user informations
+   * @returns modeled user informations data
    */
 
   informations(informations) {
@@ -50,7 +49,7 @@ class UserModeling {
 
   /**
    * @param {Object} activity user activity from api or mock
-   * @returns {Array<UserActivity>}
+   * @returns modeled user activity data
    */
 
   activity(activity) {
@@ -70,7 +69,7 @@ class UserModeling {
 
   /**
    * @param {Object} averageSessions user activity from api or mock
-   * @returns {Array<UserAverageSession>}
+   * @returns modeled user average sessions data
    */
 
   averageSessions(averageSessions) {
@@ -98,7 +97,7 @@ class UserModeling {
 
   /**
    * @param {Object} performance user activity from api or mock
-   * @returns {Array<UserPerformance>}
+   * @returns modeled user performance data
    */
 
   performance(performance) {

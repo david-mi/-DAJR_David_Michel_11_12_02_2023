@@ -3,7 +3,13 @@ import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, Legend, Responsive
 import styles from "./activity.module.css";
 import { userActivitiesPropTypes } from "./propTypes";
 import CustomToolTip from "./CustomToolTip/CustomToolTip";
-import "../../../services/User/Modeling/types";
+
+/**
+ * @typedef {Object} UserActivity
+ * @property {string} day
+ * @property {number} kilogram
+ * @property {number} calories
+ */
 
 /**
  * Create a Nutrients component to show all nutrients infos for a user

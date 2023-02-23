@@ -2,7 +2,12 @@ import React from 'react';
 import { RadarChart, PolarGrid, ResponsiveContainer, PolarAngleAxis, Radar } from "recharts";
 import styles from "./performance.module.css";
 import { UserPerformancesPropTypes } from "./propTypes";
-import "../../../services/User/Modeling/types";
+
+/**
+ * @typedef {Object} UserPerformance
+ * @property {number} value
+ * @property {"Cardio" | "Energie" | "Endurance" | "Force" | "Vitesse" | "Intensité"} kind
+ */
 
 /**
  * Show a graph with performances from a user

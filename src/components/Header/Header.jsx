@@ -4,18 +4,11 @@ import Nav from "./Nav/Nav";
 import { HeaderPropTypes } from "./propTypes";
 
 /**
- * @typedef Links
- * @type {Object}
- * @property {string} route 
- * @property {string} name
- */
-
-/**
  * Create a Header component which takes a React ElementType as props
  * 
  * @param {Object} props
  * @param {React.ElementType} props.Logo
- * @param {Links[]} props.links
+ * @param {Array<object>} props.links
  */
 
 const Header = ({ Logo, links }) => {

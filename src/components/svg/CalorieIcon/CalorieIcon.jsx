@@ -1,4 +1,10 @@
 import styles from "./calorieIcon.module.css";
+import { CalorieIconPropTypes } from "./propTypes";
+
+/**
+ * @param {object} props 
+ * @param {string} props.className
+ */
 
 const CalorieIcon = ({ className }) => {
   return (
@@ -9,5 +15,7 @@ const CalorieIcon = ({ className }) => {
     </div>
   );
 };
+
+CalorieIcon.propTypes = CalorieIconPropTypes;
 
 export default CalorieIcon;

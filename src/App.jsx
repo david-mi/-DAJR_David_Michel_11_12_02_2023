@@ -2,7 +2,6 @@ import Header from "./components/Header/Header";
 import { SportSeeLogo } from "./components/svg/index";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./Routes";
-import "./services/User/Modeling/types";
 
 const headerNavLinks = [
   { route: "/", name: "Accueil" },

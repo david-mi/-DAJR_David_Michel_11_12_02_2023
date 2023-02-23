@@ -1,4 +1,10 @@
 import styles from "./lipidIcon.module.css";
+import { LipidIconPropTypes } from "./propTypes";
+
+/**
+ * @param {object} props 
+ * @param {string} props.className
+ */
 
 const LipidIcon = ({ className }) => {
   return (
@@ -11,5 +17,7 @@ const LipidIcon = ({ className }) => {
     </div>
   );
 };
+
+LipidIcon.propTypes = LipidIconPropTypes;
 
 export default LipidIcon;
