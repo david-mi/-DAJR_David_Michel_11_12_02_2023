@@ -19,7 +19,13 @@ const Activity = ({ activity }) => {
       <ResponsiveContainer width="99%" height="auto" aspect={3}>
         <BarChart data={activity} barGap={8} barCategoryGap={54}  >
           <CartesianGrid strokeDasharray="2" vertical={false} />
-          <XAxis dataKey="index" tickMargin={16} tickLine={false} />
+          <XAxis
+            dataKey="index"
+            tickMargin={16}
+            tickLine={false}
+            scale="point"
+            padding={{ left: 10, right: 10 }}
+          />
           <YAxis
             yAxisId="calories"
             hide={true}
@@ -40,7 +46,11 @@ const Activity = ({ activity }) => {
             dataKey="kilogram"
             type="number"
           />
-          <Tooltip content={<CustomToolTip />} wrapperStyle={{ outline: "none" }} cursor={{ width: 56 }} />
+          <Tooltip
+            content={<CustomToolTip />}
+            wrapperStyle={{ outline: "none" }}
+            cursor={{ width: 56 }}
+          />
           <Legend
             verticalAlign="top"
             align="right"

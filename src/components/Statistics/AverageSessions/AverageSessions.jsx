@@ -35,7 +35,7 @@ const AverageSessions = ({ averageSessions }) => {
             strokeWidth={3}
             unit="min"
           />
-          <Tooltip content={<CustomToolTip />} cursor={{ fill: "green" }} offset={0} wrapperStyle={{ outline: "none" }} />
+          <Tooltip content={<CustomToolTip />} wrapperStyle={{ outline: "none" }} />
         </LineChart>
       </ResponsiveContainer>
     </div >

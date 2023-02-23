@@ -35,6 +35,7 @@ const Score = ({ score }) => {
           <RadialBar
             dataKey="score"
             fill="#FF0000"
+            cornerRadius={5}
           />
         </RadialBarChart>
       </ResponsiveContainer>
