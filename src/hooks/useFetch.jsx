@@ -35,6 +35,8 @@ const useFetch = (userId) => {
     async function getData() {
       try {
         setLoading(true);
+        // add fake delay for services responses
+        await (() => new Promise((resolve) => setTimeout(resolve, 1500)))();
 
         const apiData = await userService.getAllData(userId);
         const [informations, activity, averageSessions, performance] = apiData;
