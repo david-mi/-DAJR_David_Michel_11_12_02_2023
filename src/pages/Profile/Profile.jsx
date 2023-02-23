@@ -5,12 +5,13 @@ import SideNav from "../../components/SideNav/SideNav";
 import Statistics from "../../components/Statistics/Statistics";
 import styles from "./profile.module.css";
 import { profileNavLinks } from "./profileNavLinks";
+import Loader from "../../components/Loader/Loader";
 
 const Profile = () => {
   const { userId } = useParams();
   const { userData, loading, error } = useFetch(userId);
 
-  if (loading) return "chargement...";
+  if (loading) return <Loader />;
   if (error) return error.message;
   if (userData === null) return null;
 
