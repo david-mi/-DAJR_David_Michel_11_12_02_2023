@@ -14,5 +14,6 @@
     justify-self: flex-start;
     gap: clamp(15px, 2vw, 25px);
     max-width: none;
+    flex-wrap: wrap;
   }
 }
