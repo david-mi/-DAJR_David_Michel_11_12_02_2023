@@ -13,6 +13,7 @@ import CustomLabel from "./CustomLabel/CustomLabel";
 const Score = ({ score }) => {
   return (
     <div className={styles.score}>
+      <p className={styles.title}>Score</p>
       <CustomLabel score={score} />
       <ResponsiveContainer>
         <RadialBarChart

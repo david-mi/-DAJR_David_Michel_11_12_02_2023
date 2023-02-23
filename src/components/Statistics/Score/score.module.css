@@ -7,3 +7,11 @@
   padding-block: 13px;
   background-color: #FBFBFB;
 }
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  position: absolute;
+  left: 30px;
+  top: 24px;
+}
