@@ -1,8 +1,9 @@
 import userServiceApi from "./services/User/User";
 import userServiceMock from "./services/User/UserMock";
 
-const apiEnvironment = process.env.REACT_APP_API_HOST !== undefined;
+const userServices = {
+  "MOCK": userServiceMock,
+  "API": userServiceApi
+};
 
-export const userService = apiEnvironment
-  ? userServiceApi
-  : userServiceMock;
+export const userService = userServices[process.env.REACT_APP_ENV_DATA];

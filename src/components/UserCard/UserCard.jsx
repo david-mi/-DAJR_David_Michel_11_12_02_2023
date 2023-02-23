@@ -11,14 +11,12 @@ import { UserCardPropTypes } from "./propTypes";
  */
 
 const UserCard = ({ userId, Logo }) => {
-  const apiEnvironment = process.env.REACT_APP_API_HOST !== undefined
-    ? "API"
-    : "MOCK";
+  const dataEnvironment = process.env.REACT_APP_ENV_DATA;
 
   return (
     <Link to={`profile/${userId}`} className={styles.link}>
       <span className={styles.user}>Utilisateur {userId}</span>
-      <span>({apiEnvironment})</span>
+      <span>({dataEnvironment})</span>
       <div className={styles.logo}>
         <Logo />
       </div>

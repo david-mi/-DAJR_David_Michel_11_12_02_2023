@@ -17,7 +17,7 @@
   "scripts": {
     "dev-api": "env-cmd -e api react-scripts start",
     "dev-mock": "env-cmd -e mock react-scripts start",
-    "build": "react-scripts build",
+    "build-mock": "env-cmd -e mock react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
