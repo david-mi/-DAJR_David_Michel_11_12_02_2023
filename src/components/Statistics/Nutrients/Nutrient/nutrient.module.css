@@ -11,13 +11,6 @@
   border-radius: 5px;
 }
 
-@media screen and (max-width: 1400px) {
-  .nutrient {
-    padding: clamp(10px, 3vw, 20px);
-  }
-}
-
-
 .count {
   grid-area: count;
   font-weight: bold;
@@ -28,7 +21,7 @@
   grid-area: name;
   align-self: flex-end;
   color: #74798C;
-  font-weight: 14px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -39,6 +32,7 @@
   place-items: center;
   height: 60px;
   width: 60px;
+
   border-radius: 6px;
   overflow: hidden;
 }
@@ -48,4 +42,24 @@
   position: absolute;
   inset: 0;
   opacity: 0.2;
+}
+
+@media screen and (max-width: 1400px) {
+  .nutrient {
+    padding: clamp(10px, 1vw, 20px);
+    margin-top: 10px;
+  }
+
+  .count {
+    font-size: clamp(14px, 1.7vw, 20px);
+  }
+
+  .name {
+    font-size: clamp(11px, 2vw, 14px);
+  }
+
+  .icon {
+    height: clamp(30px, 5vw, 60px);
+    width: clamp(30px, 5vw, 60px);
+  }
 }
