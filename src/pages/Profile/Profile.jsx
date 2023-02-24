@@ -6,13 +6,14 @@ import Statistics from "../../components/Statistics/Statistics";
 import styles from "./profile.module.css";
 import { profileNavLinks } from "./profileNavLinks";
 import Loader from "../../components/Loader/Loader";
+import ErrorPage from "../Error/Error";
 
 const Profile = () => {
   const { userId } = useParams();
   const { userData, loading, error } = useFetch(userId);
 
   if (loading) return <Loader />;
-  if (error) return error.message;
+  if (error) return <ErrorPage message={error.message} />;
   if (userData === null) return null;
 
   return (

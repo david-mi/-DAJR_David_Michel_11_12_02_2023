@@ -1,0 +1,47 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text {
+  position: relative;
+  z-index: 99;
+  background-color: black;
+  padding: 5vw 8vw;
+  border-radius: 20px;
+  color: white
+}
+
+.title {
+  color: #E60000;
+  font-size: 6rem;
+  margin-bottom: 50px;
+}
+
+.message {
+  font-size: 2rem;
+}
+
+.container svg {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  opacity: 0.5;
+  filter: blur(10px);
+}
+
+.container svg path:nth-child(9),
+.container svg path:nth-child(1),
+.container svg path:nth-child(2),
+.container svg path:nth-child(3),
+.container svg path:nth-child(4),
+.container svg path:nth-child(5),
+.container svg path:nth-child(6),
+.container svg path:nth-child(7),
+.container svg path:nth-child(8) {
+  fill: gray;
+}
