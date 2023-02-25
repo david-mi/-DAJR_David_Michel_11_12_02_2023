@@ -5,14 +5,14 @@
   height: 263px;
   background-color: #FF0000;
   border-radius: 5px;
-  padding: 81px 15px 15px 15px;
+  padding-inline: 15px;
+  padding-bottom: 15px;
   overflow: hidden;
 }
 
 .title {
-  position: absolute;
-  top: 29px;
-  left: 29px;
+  margin-left: 19px;
+  margin-top: 29px;
   font-size: 15px;
   opacity: 0.5;
   width: 150px;

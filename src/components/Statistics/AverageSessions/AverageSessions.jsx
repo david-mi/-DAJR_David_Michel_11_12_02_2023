@@ -21,15 +21,14 @@ const AverageSessions = ({ averageSessions }) => {
   return (
     <div className={styles["average-sessions"]}>
       <p className={styles.title}>Durée moyenne des sessions</p>
-      <ResponsiveContainer>
+      <ResponsiveContainer height={"80%"}>
         <LineChart data={averageSessions}>
           <XAxis
             dataKey="day"
             axisLine={false}
             tickLine={false}
             tick={{ fill: "white", opacity: 0.5 }}
-            tickMargin={20}
-            height={50}
+          // tickMargin={-70}
           />
           <Line
             dataKey="sessionLength"
@@ -40,7 +39,11 @@ const AverageSessions = ({ averageSessions }) => {
             strokeWidth={3}
             unit="min"
           />
-          <Tooltip content={<CustomToolTip />} wrapperStyle={{ outline: "none" }} />
+          <Tooltip
+            content={<CustomToolTip />}
+            wrapperStyle={{ outline: "none" }}
+            cursor={false}
+          />
         </LineChart>
       </ResponsiveContainer>
     </div >
