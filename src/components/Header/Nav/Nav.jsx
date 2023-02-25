@@ -15,7 +15,6 @@ import { NavPropTypes } from "./propTypes";
  * 
  * @param {Object} props
  * @param {Links[]} props.links 
- * @returns 
  */
 
 const Nav = ({ links }) => {

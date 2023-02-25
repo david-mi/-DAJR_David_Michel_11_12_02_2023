@@ -1,5 +1,10 @@
 # DAJR Projet 12 - SportSee
+
+<br/>
+
 ![](public/github_logo.png)
+
+<br/>
 
 ## Prerequisites
 
@@ -29,6 +34,10 @@ Then launch webpack server on port 4000 on **API** ou **MOCK** environment with 
 - API environment : `npm run dev-api`
 - MOCK environment : `npm run dev-mock`
 
- <br/>
+## Links
 
-[![Lien Vercel](https://img.shields.io/badge/Vercel-Visit-blue)](https://david-mi-sportsee.vercel.app/)
+### See documentation
+[![Documentation](https://img.shields.io/badge/Doc-Visit-green)](https://david-mi.github.io/DAJR_David_Michel_12_12_02_2023/)
+
+### Visit on Vercel
+[![Vercel](https://img.shields.io/badge/Vercel-Visit-blue)](https://david-mi-sportsee.vercel.app/)

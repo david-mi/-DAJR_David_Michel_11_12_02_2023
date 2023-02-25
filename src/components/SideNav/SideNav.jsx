@@ -16,7 +16,6 @@ import { SideNavPropTypes } from "./propTypes";
  * @param {Object} props
  * @param {string} props.copyrights
  * @param {Links[]} props.links 
- * @returns 
  */
 
 const SideNav = ({ copyrights, links }) => {
