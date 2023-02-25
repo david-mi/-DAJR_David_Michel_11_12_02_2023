@@ -21,7 +21,7 @@ const Performance = ({ performance }) => {
     <div className={styles.performance}>
       <ResponsiveContainer>
         <RadarChart data={performance}>
-          <PolarGrid />
+          <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"
             tick={{ fill: "white", fontSize: "12px" }}

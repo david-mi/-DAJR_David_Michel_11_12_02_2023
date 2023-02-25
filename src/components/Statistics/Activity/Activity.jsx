@@ -1,14 +1,24 @@
 import React from 'react';
-import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, Legend, ResponsiveContainer } from "recharts";
+import {
+  BarChart,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Bar,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 import styles from "./activity.module.css";
 import { userActivitiesPropTypes } from "./propTypes";
-import CustomToolTip from "./CustomToolTip/CustomToolTip";
+import { CustomToolTip, CustomCursor } from "./index";
 
 /**
  * @typedef {Object} UserActivity
  * @property {string} day
  * @property {number} kilogram
  * @property {number} calories
+ * @property {number} index
  */
 
 /**
@@ -55,7 +65,7 @@ const Activity = ({ activity }) => {
           <Tooltip
             content={<CustomToolTip />}
             wrapperStyle={{ outline: "none" }}
-            cursor={{ width: 56 }}
+            cursor={<CustomCursor />}
           />
           <Legend
             verticalAlign="top"
