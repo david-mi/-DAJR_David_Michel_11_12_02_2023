@@ -15,13 +15,11 @@ const Score = ({ score }) => {
     <div className={styles.score}>
       <p className={styles.title}>Score</p>
       <CustomLabel score={score} />
-      <ResponsiveContainer>
+      <ResponsiveContainer width="99%">
         <RadialBarChart
-          width={200}
-          height={200}
           data={[{ score }]}
-          innerRadius="90"
-          outerRadius="90"
+          innerRadius="80"
+          outerRadius="80"
           startAngle={90}
           endAngle={450}
           barSize={10}
