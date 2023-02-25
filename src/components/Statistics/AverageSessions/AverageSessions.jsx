@@ -28,7 +28,6 @@ const AverageSessions = ({ averageSessions }) => {
             axisLine={false}
             tickLine={false}
             tick={{ fill: "white", opacity: 0.5 }}
-          // tickMargin={-70}
           />
           <Line
             dataKey="sessionLength"
