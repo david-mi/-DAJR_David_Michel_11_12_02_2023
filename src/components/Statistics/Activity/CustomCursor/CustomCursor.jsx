@@ -1,5 +1,15 @@
 import React from 'react';
 import { Rectangle } from "recharts";
+import { CustomCursorPropTypes } from "./propTypes";
+
+/**
+ * Create a custom Tooltip cursor svg component for Activity
+ * 
+ * @param {Object} props 
+ * @param {number} props.x
+ * @param {number} props.y
+ * @param {number} props.height
+ */
 
 const CustomCursor = (props) => {
   const { x, y, height } = props;
@@ -15,5 +25,7 @@ const CustomCursor = (props) => {
     />
   );
 };
+
+CustomCursor.propTypes = CustomCursorPropTypes;
 
 export default CustomCursor;
