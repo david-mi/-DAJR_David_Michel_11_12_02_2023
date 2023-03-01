@@ -5,7 +5,7 @@ import Nav from "./Nav/Nav";
 import { HeaderPropTypes } from "./propTypes";
 
 /**
- * Create a Header component which takes a React ElementType as props
+ * Create a Header component displaying a logo and navigation links
  * 
  * @param {Object} props
  * @param {React.ElementType} props.Logo
