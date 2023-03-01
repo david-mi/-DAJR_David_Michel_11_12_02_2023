@@ -3,12 +3,12 @@ import { CalorieIcon, GlucideIcon, ProteinIcon, LipidIcon } from "../../../compo
 class UserModeling {
 
   /**
-   * @param {Object} informations user informations from api or mock
+   * @param {Object} serviceData user informations from api or mock
    * @returns modeled user informations data
    */
 
-  informations(informations) {
-    const { id, userInfos, todayScore, score, keyData } = informations;
+  informations(serviceData) {
+    const { id, userInfos, todayScore, score, keyData } = serviceData.data;
 
     return {
       id,
@@ -48,12 +48,12 @@ class UserModeling {
   }
 
   /**
-   * @param {Object} activity user activity from api or mock
+   * @param {Object} serviceData user activity from api or mock
    * @returns modeled user activity data
    */
 
-  activity(activity) {
-    const { sessions } = activity;
+  activity(serviceData) {
+    const { sessions } = serviceData.data;
 
     return Array.isArray(sessions)
       ? sessions.map(({ day, kilogram, calories }, index) => {
@@ -68,12 +68,12 @@ class UserModeling {
   }
 
   /**
-   * @param {Object} averageSessions user activity from api or mock
+   * @param {Object} serviceData user activity from api or mock
    * @returns modeled user average sessions data
    */
 
-  averageSessions(averageSessions) {
-    const { sessions } = averageSessions;
+  averageSessions(serviceData) {
+    const { sessions } = serviceData.data;
 
     const days = {
       1: "L",
@@ -96,12 +96,12 @@ class UserModeling {
   }
 
   /**
-   * @param {Object} performance user activity from api or mock
+   * @param {Object} serviceData user activity from api or mock
    * @returns modeled user performance data
    */
 
-  performance(performance) {
-    const { data } = performance;
+  performance(serviceData) {
+    const { data } = serviceData.data;
 
     const kindNames = {
       1: 'Cardio',

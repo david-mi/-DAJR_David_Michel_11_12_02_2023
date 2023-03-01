@@ -18,7 +18,7 @@ class UserService {
       throw new Error("Failed to fetch");
     }
 
-    const { data } = await response.json();
+    const data = await response.json();
     return data;
   }
 
