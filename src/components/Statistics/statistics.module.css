@@ -8,10 +8,9 @@
     "heading heading heading heading"
     "activity activity activity nutrients"
     "square square square nutrients";
-  padding-top: clamp(20px, 3vw, 40px);
-  padding-right: clamp(20px, 3vw, 60px);
-  padding-bottom: clamp(20px, 2vw, 40px);
-  padding-left: clamp(20px, 3vw, 107px);
+  padding-top: clamp(10px, 3vw, 40px);
+  padding-right: clamp(10px, 1vw, 60px);
+  padding-left: clamp(10px, 1vw, 107px);
 }
 
 @media screen and (max-width: 1000px) {
@@ -36,5 +35,6 @@
 .squares {
   grid-area: square;
   display: flex;
+
   gap: clamp(20px, 2vw, 32px);
 }

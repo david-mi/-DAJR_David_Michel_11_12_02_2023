@@ -1,7 +1,8 @@
 .performance {
-  width: 100%;
+  flex: 1 1 200px;
   max-width: 258px;
-  height: 263px;
+  width: 0;
+  aspect-ratio: calc(258/263);
   background-color: #282D30;
   border-radius: 5px;
   padding-block: 13px;
