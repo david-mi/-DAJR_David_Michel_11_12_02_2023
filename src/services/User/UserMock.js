@@ -20,7 +20,7 @@ class UserServiceMock {
         if (userData) {
           resolve(userData);
         } else {
-          reject("User Not found !");
+          reject("Utilisateur non trouvé !");
         }
       });
 

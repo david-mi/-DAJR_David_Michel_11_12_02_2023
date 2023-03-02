@@ -14,8 +14,12 @@ class UserService {
 
   async #fetchData(url) {
     const response = await fetch(url);
+
+    if (response.status === 404) {
+      throw new Error("Utilisateur non trouvé !");
+    }
     if (response.ok === false) {
-      throw new Error("Failed to fetch");
+      throw new Error("Une erreur est survenue");
     }
 
     const data = await response.json();
