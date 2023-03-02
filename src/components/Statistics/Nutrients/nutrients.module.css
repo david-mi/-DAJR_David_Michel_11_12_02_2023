@@ -8,7 +8,7 @@
   justify-self: flex-end;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   .nutrients {
     flex-direction: row;
     justify-self: flex-start;

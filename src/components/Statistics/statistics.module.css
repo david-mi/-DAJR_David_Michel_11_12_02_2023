@@ -14,7 +14,7 @@
   padding-left: clamp(20px, 7vw, 107px);
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   .statistics {
     flex: 1;
     display: grid;
@@ -27,11 +27,14 @@
       "activity"
       "square";
   }
+
+  .squares {
+    flex-wrap: wrap;
+  }
 }
 
 .squares {
   grid-area: square;
   display: flex;
-  flex-wrap: wrap;
   gap: clamp(20px, 2vw, 32px);
 }

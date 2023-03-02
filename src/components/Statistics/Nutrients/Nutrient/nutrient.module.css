@@ -44,7 +44,7 @@
   opacity: 0.2;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   .nutrient {
     padding: clamp(10px, 1vw, 20px);
     margin-top: 10px;
