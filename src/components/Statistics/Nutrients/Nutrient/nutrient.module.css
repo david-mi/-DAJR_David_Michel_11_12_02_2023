@@ -7,7 +7,8 @@
     "logo count"
     "logo name";
   background-color: #FBFBFB;
-  padding: clamp(10px, 3vw, 32px);
+  padding-inline: clamp(10px, 1vw, 32px);
+  padding-block: clamp(10px, 2vw, 32px);
   border-radius: 5px;
 }
 
@@ -15,6 +16,7 @@
   grid-area: count;
   font-weight: bold;
   font-size: 20px;
+  font-size: clamp(14px, 1.5vw, 20px);
 }
 
 .name {
@@ -32,7 +34,8 @@
   place-items: center;
   height: 60px;
   width: 60px;
-
+  height: clamp(30px, 4vw, 60px);
+  width: clamp(30px, 4vw, 60px);
   border-radius: 6px;
   overflow: hidden;
 }
@@ -46,7 +49,8 @@
 
 @media screen and (max-width: 1000px) {
   .nutrient {
-    padding: clamp(10px, 1vw, 20px);
+
+
     margin-top: 10px;
   }
 
